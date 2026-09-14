@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elieser Hernandez | Red Team Operator</title>
+    <meta name="description" content="Red Team Operator especializado en pentesting ofensivo, seguridad web, APIs e infraestructura.">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Terminal Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-terminal">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">root@elieser:~#</span>
+            </div>
+            <div class="terminal-body">
+                <p class="loader-line" data-delay="0">[<span class="green">+</span>] Initializing system...</p>
+                <p class="loader-line" data-delay="400">[<span class="green">+</span>] Loading offensive modules...</p>
+                <p class="loader-line" data-delay="800">[<span class="green">+</span>] Establishing secure connection...</p>
+                <p class="loader-line" data-delay="1200">[<span class="green">+</span>] Bypassing firewall...</p>
+                <p class="loader-line" data-delay="1600">[<span class="green">+</span>] Access granted. Welcome, operator.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="logo-bracket">&lt;</span>
+            EH
+            <span class="logo-bracket">/&gt;</span>
+        </a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Inicio</a>
+            <a href="#about">Sobre mí</a>
+            <a href="#experience">Experiencia</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contacto</a>
+            <span class="active-nav"></span>
+        </nav>
+
+        <div class="header-status">
+            <span class="status-dot"></span>
+            <span class="status-text">ONLINE</span>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="terminal-prompt">
+                <span class="prompt-user">root@kali</span><span class="prompt-sep">:</span><span
+                    class="prompt-path">~</span><span class="prompt-sym">$</span>
+                <span class="prompt-cmd">whoami</span>
+            </div>
+
+            <h1>Elieser <span class="glitch" data-text="Hernandez">Hernandez</span></h1>
+
+            <div class="text-animate">
+                <h3>Red Team Operator</h3>
+            </div>
+
+            <p>
+                <span class="highlight">Pentester ofensivo</span> especializado en aplicaciones web, APIs e
+                infraestructura.
+                Experiencia práctica en <strong>auditorías de seguridad</strong>, <strong>bug bounty</strong> y
+                automatización de procesos de testing.
+                Enfoque metódico, orientado a impacto real de negocio, identificación de vulnerabilidades críticas
+                y reporting técnico-ejecutivo.
+            </p>
+
+            <div class="home-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="27">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Auditorías</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="75">0</span><span class="stat-plus">%</span>
+                    <span class="stat-label">Validación BB</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="40">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Reportes</span>
+                </div>
+            </div>
+
+            <!-- <div class="btn-box">
+                <a href="#contact" class="btn">
+                    <span>Contratarme</span>
+                    <i class='bx bx-terminal'></i>
+                </a>
+                <a href="#experience" class="btn btn-outline">
+                    <span>Ver Experiencia</span>
+                    <i class='bx bx-code-alt'></i>
+                </a>
+            </div> -->
+        </div>
+
+        <div class="home-sci">
+            <a href="https://web.telegram.org/k/#@ElieserHS" target="_blank" rel="noopener" title="Telegram">
+                <i class='bx bxl-telegram'></i>
+            </a>
+            <a href="https://wa.me/5359805123" target="_blank" rel="noopener" title="WhatsApp">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="mailto:astrorealo31@gmail.com" title="Email">
+                <i class='bx bxl-gmail'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/elieser-hernandez-795771273/" target="_blank" rel="noopener" title="LinkedIn">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+        </div>
+
+        <div class="home-imgHover"></div>
+        <div class="home-scroll-indicator">
+            <span>Scroll</span>
+            <i class='bx bx-chevron-down'></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="heading">
+            <span class="heading-number">01.</span>
+            Sobre <span>Mí</span>
+        </h2>
+
+        <div class="about-container">
+            <div class="about-img">
+                <div class="img-frame">
+                    <img src="./photo.png" alt="Elieser Hernandez - Red Team Operator" />
+                </div>
+                <span class="circle-spin"></span>
+                <div class="img-decorations">
+                    <span class="deco-line"></span>
+                    <span class="deco-corner tl"></span>
+                    <span class="deco-corner tr"></span>
+                    <span class="deco-corner bl"></span>
+                    <span class="deco-corner br"></span>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-terminal">
+                    <span class="terminal-cmd">$ cat profile.txt</span>
+                </div>
+                <h3>Red Team Operator / Offensive Security Specialist</h3>
+                <p>
+                    Soy un <strong>Pentester Ofensivo</strong> especializado en aplicaciones web, APIs e
+                    infraestructura,
+                    con experiencia práctica en auditorías de seguridad, programas de bug bounty y automatización
+                    de procesos de testing. Mi metodología se basa en <strong>OWASP Top 10</strong>,
+                    <strong>PTES</strong> y <strong>MITRE ATT&CK</strong>, con un enfoque en la identificación y
+                    explotación de vulnerabilidades críticas como <strong>SQL Injection</strong>,
+                    <strong>XSS</strong>, <strong>SSRF</strong>, <strong>RCE</strong> y fallas de lógica de negocio.
+                </p>
+                <p>
+                    Con una <strong>tasa de validación del 75%</strong> en reportes de bug bounty y experiencia en
+                    <strong>27+ auditorías de seguridad</strong>, proporciono reportes técnicos detallados y
+                    resúmenes ejecutivos enfocados en el impacto de negocio y la exposición al riesgo.
+                </p>
+
+                <div class="about-info-grid">
+                    <div class="info-item">
+                        <i class='bx bx-map'></i>
+                        <div>
+                            <span class="info-label">Ubicación</span>
+                            <span class="info-value">La Habana, Cuba (Remoto)</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-envelope'></i>
+                        <div>
+                            <span class="info-label">Email</span>
+                            <span class="info-value">astrorealo31@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-phone'></i>
+                        <div>
+                            <span class="info-label">Teléfono</span>
+                            <span class="info-value">+53 59805123</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-check-shield'></i>
+                        <div>
+                            <span class="info-label">Disponibilidad</span>
+                            <span class="info-value status-available">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-box btns">
+                    <a href="#" onclick="descargarArchivo()" class="btn">
+                        <span>Descargar CV</span>
+                        <i class='bx bx-download'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="education" id="experience">
+        <h2 class="heading">
+            <span class="heading-number">02.</span>
+            Mi <span>Experiencia</span>
+        </h2>
+
+        <div class="education-row">
+            <!-- Professional Experience -->
+            <div class="education-column">
+                <h3 class="title">
+                    <i class='bx bx-briefcase'></i>
+                    Experiencia Profesional
+                </h3>
+                <div class="education-box">
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="content-header">
+                                <div class="year">
+                                    <i class='bx bxs-calendar'></i>
+                                    Ago 2025 — Mar 2026
+                                </div>
+                                <span class="tag tag-current">Actual</span>
+                            </div>
+                            <h3>Penetration Tester (Mid-Level)</h3>
+                            <h4 class="company">INTRUST SECURITY — Remoto</h4>
+                            <ul class="content-list">
+                                <li>Auditorías de seguridad ofensiva bajo metodologías <strong>OWASP</strong> y
+                                    <strong>PTES</strong> en aplicaciones web, APIs y plataformas móviles.</li>
+                                <li>Ejecuté <strong>27+ auditorías</strong>, identificando un promedio de
+                                    <strong>8+ vulnerabilidades</strong> por evaluación.</li>
+                                <li>Explotación activa de <strong>SQL Injection</strong>, <strong>XSS</strong>,
+                                    <strong>SSRF</strong>, <strong>RCE</strong> y fallas de lógica de negocio.</li>
+                                <li>Automatización de flujos de reconocimiento y explotación con scripts en
+                                    <strong>Python</strong> y <strong>Bash</strong>.</li>
+                                <li>Producción de reportes técnicos detallados y resúmenes ejecutivos enfocados en
+                                    impacto de negocio.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="content-header">
+                                <div class="year">
+                                    <i class='bx bxs-calendar'></i>
+                                    Dic 2023 — Ago 2025
+                                </div>
+                            </div>
+                            <h3>Freelancer / Bug Bounty</h3>
+                            <h4 class="company">Investigador de Seguridad Independiente — Remoto</h4>
+                            <ul class="content-list">
+                                <li>Participación activa en múltiples programas de <strong>Bug Bounty</strong>
+                                    enfocados en aplicaciones web e infraestructura.</li>
+                                <li>Tasa de aceptación de reportes del <strong>75%</strong> (6 de 8 envíos
+                                    validados).</li>
+                                <li>Pruebas manuales en profundidad combinadas con herramientas automatizadas.</li>
+                                <li>Identificación de debilidades de control de acceso, validación insuficiente y
+                                    configuraciones inseguras.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="content-header">
+                                <div class="year">
+                                    <i class='bx bxs-calendar'></i>
+                                    May 2023 — Dic 2023
+                                </div>
+                            </div>
+                            <h3>Especialista en Monitoreo de Sistemas y Seguridad</h3>
+                            <h4 class="company">XETID DEVELOPMENT COMPANY — La Habana, Cuba</h4>
+                            <ul class="content-list">
+                                <li>Monitoreo de disponibilidad, integridad y seguridad usando <strong>Elastic
+                                        Stack</strong> (Elasticsearch y Kibana).</li>
+                                <li>Simulaciones controladas de <strong>DoS</strong> para evaluar la resiliencia de
+                                    la infraestructura.</li>
+                                <li>Generación de <strong>40+ reportes</strong> de incidentes de seguridad con
+                                    análisis post-incidente.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Education & Certifications -->
+            <div class="education-column">
+                <h3 class="title">
+                    <i class='bx bx-certification'></i>
+                    Educación y Certificaciones
+                </h3>
+                <div class="education-box">
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="content-header">
+                                <div class="year">
+                                    <i class='bx bxs-calendar'></i>
+                                    2022 — 2026
+                                </div>
+                            </div>
+                            <h3>Ingeniería en Ciencias de la Computación</h3>
+                            <h4 class="company">Universidad de Ciencias Informáticas (UCI)</h4>
+                            <p class="content-desc">La Habana, Cuba. Enfoque en ciberseguridad, desarrollo de
+                                software y análisis de datos.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="content-header">
+                                <div class="year">
+                                    <i class='bx bxs-calendar'></i>
+                                    Feb 2026
+                                </div>
+                                <span class="tag tag-cert">Certificado</span>
+                            </div>
+                            <h3>EF SET Certificate B1 Intermediate</h3>
+                            <h4 class="company">EF Standard English Test — 41/100</h4>
+                            <p class="content-desc">Verificar: cert.efset.org/YfMbVQ</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="content-header">
+                                <div class="year">
+                                    <i class='bx bxs-calendar'></i>
+                                    ICIP
+                                </div>
+                            </div>
+                            <h3>ICIP Certificate</h3>
+                            <h4 class="company">Institución: ICIP</h4>
+                            <p class="content-desc">Certificado verificado.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="content-header">
+                                <div class="year">
+                                    <i class='bx bxs-calendar'></i>
+                                    Idiomas
+                                </div>
+                            </div>
+                            <h3>Idiomas</h3>
+                            <div class="lang-item">
+                                <span class="lang-name">Español</span>
+                                <span class="lang-level">Nativo</span>
+                            </div>
+                            <div class="lang-item">
+                                <span class="lang-name">Inglés</span>
+                                <span class="lang-level">B1 — Lectura técnica y reportes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading">
+            <span class="heading-number">03.</span>
+            Mis <span>Skills</span>
+        </h2>
+
+        <div class="skills-row">
+            <!-- Methodologies & Tools -->
+            <div class="skills-column">
+                <h3 class="title">
+                    <i class='bx bx-shield-quarter'></i>
+                    Metodologías y Herramientas
+                </h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+
+                        <div class="progress">
+                            <h3>OWASP Top 10 / PTES / MITRE ATT&CK <span>95%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Burp Suite / Nmap / Metasploit <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>SQLMap / Nuclei / FFUF / Amass <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Hashcat / John the Ripper <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Threat Modeling / Bug Bounty <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Specializations -->
+            <div class="skills-column">
+                <h3 class="title">
+                    <i class='bx bx-code-curly'></i>
+                    Especializaciones Técnicas
+                </h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+
+                        <div class="progress">
+                            <h3>Web Application Pentesting <span>95%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>API Security Testing <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Mobile Security <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Python / Bash / JavaScript / SQL <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Reconocimiento / Explotación <span>92%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Icons -->
+        <div class="tech-stack">
+            <h3 class="tech-title">// Tech Arsenal</h3>
+            <div class="tech-icons">
+                <div class="tech-item" title="Burp Suite"><i class='bx bx-bug'></i><span>Burp</span></div>
+                <div class="tech-item" title="Nmap"><i class='bx bx-radar'></i><span>Nmap</span></div>
+                <div class="tech-item" title="Metasploit"><i class='bx bx-target-lock'></i><span>Metasploit</span></div>
+                <div class="tech-item" title="Python"><i class='bx bxl-python'></i><span>Python</span></div>
+                <div class="tech-item" title="Bash"><i class='bx bx-terminal'></i><span>Bash</span></div>
+                <div class="tech-item" title="SQLMap"><i class='bx bx-data'></i><span>SQLMap</span></div>
+                <div class="tech-item" title="Nuclei"><i class='bx bx-atom'></i><span>Nuclei</span></div>
+                <div class="tech-item" title="Wireshark"><i class='bx bx-line-chart'></i><span>Wireshark</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">
+            <span class="heading-number">04.</span>
+            Contacto
+        </h2>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>// Iniciemos una conversación</h3>
+                <p>¿Necesitas un pentester para tu próximo proyecto? ¿Quieres auditar la seguridad de tu aplicación
+                    web, API o infraestructura? Estoy disponible para colaborar.</p>
+
+                <div class="contact-methods">
+                    <a href="mailto:astrorealo31@gmail.com" class="contact-method">
+                        <i class='bx bx-envelope'></i>
+                        <div>
+                            <span>Email</span>
+                            <strong>astrorealo31@gmail.com</strong>
+                        </div>
+                    </a>
+                    <a href="https://web.telegram.org/k/#@ElieserHS" target="_blank" rel="noopener" class="contact-method">
+                        <i class='bx bxl-telegram'></i>
+                        <div>
+                            <span>Telegram</span>
+                            <strong>@ElieserHS</strong>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/5359805123" target="_blank" rel="noopener" class="contact-method">
+                        <i class='bx bxl-whatsapp'></i>
+                        <div>
+                            <span>WhatsApp</span>
+                            <strong>+53 59805123</strong>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/elieser-hernandez-795771273/" target="_blank" rel="noopener" class="contact-method">
+                        <i class='bx bxl-linkedin'></i>
+                        <div>
+                            <span>LinkedIn</span>
+                            <strong>elieser-hernandez</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contact-terminal">
+                    <span class="terminal-cmd">$ echo "Responderé en menos de 24h"</span>
+                </div>
+            </div>
+
+            <form action="#" class="contact-form" onsubmit="sendEmail(event)">
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Nombre completo" id="name" required>
+                        <span class="focus"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="Correo electrónico" id="email" required>
+                        <span class="focus"></span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Asunto" id="topic" required>
+                        <span class="focus"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="tel" placeholder="Teléfono (opcional)" id="phone">
+                        <span class="focus"></span>
+                    </div>
+                </div>
+
+                <div class="textarea-field">
+                    <textarea cols="30" rows="10" placeholder="Tu mensaje..." id="message" required></textarea>
+                    <span class="focus"></span>
+                </div>
+
+                <div class="btn-box btns">
+                    <button type="submit" class="btn">
+                        <span>Enviar Mensaje</span>
+                        <i class='bx bx-send'></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-bracket">&lt;</span>
+                EH
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-tagline">Red Team Operator | Web, APIs & Infrastructure Security</p>
+        </div>
+
+        <div class="footer-text">
+            <p>
+                <span class="footer-cmd">$</span> Designed & developed with <i class='bx bx-heart'></i> in 2026
+            </p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#" title="Volver arriba">
+                <i class='bx bx-up-arrow-alt'></i>
+            </a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
